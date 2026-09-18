@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydyn Minds — Creative Studio for Sound & Breath Practitioners</title>
+  <meta name="description" content="Hydyn Minds is a small creative studio making reels, event stories, and promotional videos for gong and sound bath practitioners, breathwork facilitators, and yoga teachers across the US & Canada." />
+  <meta name="keywords" content="gong bath video, sound bath reel, breathwork video, yoga retreat promo, wellness creative studio" />
+  <meta property="og:title" content="Hydyn Minds — Creative Studio for Sound & Breath Practitioners" />
+  <meta property="og:description" content="Reels, event stories, and promotional videos for wellness practitioners across the US & Canada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.hydynminds.in" />
+  <meta property="og:image" content="https://www.hydynminds.in/assets/work/moon-event-poster.jpg" />
+  
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hm-emerald': '#004F2E',
+            'hm-emerald-deep': '#013322',
+            'hm-jade': '#006850',
+            'hm-ivory': '#FDFDD0',
+            'hm-gold': '#D4AF37',
+            'hm-gold-light': '#E4C766',
+            'hm-ink': '#004F2E',
+            'hm-cream': '#FDFDD0',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            body: ['Work Sans', 'sans-serif'],
+          },
+          maxWidth: {
+            content: '1180px',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* ── Base ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Work Sans', sans-serif; color: #004F2E; background: #FDFDD0; }
+
+    /* ── Watermark ── */
+    .watermark {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(100px, 16vw, 220px);
+      color: rgba(253, 253, 208, 0.06);
+      position: absolute;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    /* ── Ripple Animation ── */
+    @keyframes ripple-expand {
+      0% { transform: scale(0.2); opacity: 0; }
+      15% { opacity: 0.35; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+    .ripple-ring {
+      animation: ripple-expand 4.5s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+      transform-origin: center;
+      opacity: 0;
+    }
+    .ripple-ring:nth-child(2) { animation-delay: 1.0s; }
+    .ripple-ring:nth-child(3) { animation-delay: 2.0s; }
+    .ripple-ring:nth-child(4) { animation-delay: 3.0s; }
+    .ripple-ring:nth-child(5) { animation-delay: 3.5s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ripple-ring { animation: none; opacity: 0.08; transform: scale(1); }
+    }
+
+    /* ── Gold HR ── */
+    .gold-rule {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #D4AF37 20%, #D4AF37 80%, transparent 100%);
+      max-width: 60%;
+      margin: 2.5rem 0;
+    }
+
+    /* ── Form focus ── */
+    .form-input:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+
+    /* ── Success fade ── */
+    .fade-enter { opacity: 0; transform: translateY(10px); transition: all 0.5s ease; }
+    .fade-enter-active { opacity: 1; transform: translateY(0); }
+
+    /* ── Nav blur ── */
+    .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+    /* ── Scroll padding for sticky nav ── */
+    html { scroll-padding-top: 80px; }
+
+    /* ── Gold left border accent ── */
+    .gold-border-left { border-left: 3px solid #D4AF37; padding-left: 1.5rem; }
+
+    /* ── Subtle section entrance ── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      animation: fade-up 0.8s ease-out both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up { animation: none; opacity: 1 !important; }
+    }
+
+    /* ── Mobile menu ── */
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .mobile-menu.open { max-height: 300px; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 1. NAVIGATION                                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-hm-emerald/95 transition-all duration-300">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group" aria-label="Hydyn Minds home">
+          <!-- Logo Mark -->
+          <img src="assets/logo.svg" alt="Hydyn Minds logo" width="56" height="56" class="flex-shrink-0" />
+          <span class="font-display text-2xl text-hm-cream tracking-tight" style="font-weight: 600;">Hydyn Minds</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#the-work" class="font-body text-sm text-hm-cream/80 hover:text-hm-gold transition-colors duration-200 tracking-wide">Work</a>
+          <a href="#pricing" class="font-body text-sm text-hm-cream/80 hover:text-hm-gold transition-colors duration-200 tracking-wide">Pricing</a>
+          <a href="#about" class="font-body text-sm text-hm-cream/80 hover:text-hm-gold transition-colors duration-200 tracking-wide">About</a>
+          <a href="#faq" class="font-body text-sm text-hm-cream/80 hover:text-hm-gold transition-colors duration-200 tracking-wide">FAQ</a>
+          <a href="#say-hello" class="inline-flex items-center px-6 py-2.5 bg-hm-gold text-hm-emerald font-body text-sm rounded-full hover:bg-hm-gold-light transition-colors duration-200 tracking-wide" style="font-weight: 500;">
+            Start the Conversation
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="block w-6 h-0.5 bg-hm-cream transition-all duration-300 origin-center" id="bar1"></span>
+          <span class="block w-6 h-0.5 bg-hm-cream transition-all duration-300" id="bar2"></span>
+          <span class="block w-6 h-0.5 bg-hm-cream transition-all duration-300 origin-center" id="bar3"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="pb-6 pt-2 flex flex-col gap-4 border-t border-hm-cream/10">
+          <a href="#the-work" class="font-body text-hm-cream/80 hover:text-hm-gold transition-colors py-2">Work</a>
+          <a href="#pricing" class="font-body text-hm-cream/80 hover:text-hm-gold transition-colors py-2">Pricing</a>
+          <a href="#about" class="font-body text-hm-cream/80 hover:text-hm-gold transition-colors py-2">About</a>
+          <a href="#faq" class="font-body text-hm-cream/80 hover:text-hm-gold transition-colors py-2">FAQ</a>
+          <a href="#say-hello" class="inline-flex items-center justify-center px-6 py-3 bg-hm-gold text-hm-emerald font-body rounded-full hover:bg-hm-gold-light transition-colors" style="font-weight: 500;">
+            Start the Conversation
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 2. HERO / OPENING                              -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="hero" class="relative bg-hm-emerald overflow-hidden" style="padding-top: 160px; padding-bottom: 120px;">
+
+    <!-- Watermark -->
+    <div class="watermark top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
+      Hydyn Minds
+    </div>
+
+    <!-- Ripple SVG — Centered ambient gong-strike ripple -->
+    <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true" style="pointer-events: none;">
+      <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[700px] h-[700px] sm:w-[800px] sm:h-[800px] lg:w-[1000px] lg:h-[1000px]">
+        <circle class="ripple-ring" cx="400" cy="400" r="60" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+        <circle class="ripple-ring" cx="400" cy="400" r="140" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle class="ripple-ring" cx="400" cy="400" r="230" stroke="#D4AF37" stroke-width="1" fill="none"/>
+        <circle class="ripple-ring" cx="400" cy="400" r="320" stroke="#D4AF37" stroke-width="0.7" fill="none"/>
+        <circle class="ripple-ring" cx="400" cy="400" r="390" stroke="#D4AF37" stroke-width="0.5" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl">
+
+        <!-- Main headline -->
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-hm-cream leading-[1.15] mb-8" style="font-weight: 500; letter-spacing: -0.02em;">
+          Video editing and creative content that helps your next sound bath, breathwork session, or retreat get noticed.
+        </h1>
+
+        <!-- Opening copy -->
+        <p class="font-body text-lg sm:text-xl text-hm-cream/85 leading-relaxed mb-10 max-w-xl">
+          You create the experience. We turn it into content people want to experience for themselves.
+        </p>
+
+        <!-- CTA -->
+        <a href="#say-hello" class="inline-flex items-center px-8 py-3.5 bg-hm-gold text-hm-emerald font-body text-base rounded-full hover:bg-hm-gold-light transition-all duration-200 hover:shadow-lg hover:shadow-hm-gold/20" style="font-weight: 500;">
+          Start the Conversation
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. THE WORK                                     -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="the-work" class="bg-hm-ivory" style="padding: 100px 0;">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-ink leading-tight mb-4" style="font-weight: 500; letter-spacing: -0.02em;">The Work</h2>
+      <p class="font-body text-xl text-hm-ink/80 mb-16">Real edits, from real footage shot on a phone.</p>
+
+      <!-- Video Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-24">
+        <!-- Video 1 -->
+        <div class="flex flex-col gap-4">
+          <video class="w-full rounded-2xl shadow-sm aspect-[9/16] object-cover bg-hm-emerald/5" src="assets/work/casa-mana.mp4" poster="assets/work/casa-mana-poster.png" muted loop playsinline preload="none" controls></video>
+          <p class="font-body text-sm text-hm-ink/70 leading-relaxed px-1">
+            Casa Mana event &middot; Custom edit &middot; Original room audio.
+          </p>
+        </div>
+        <!-- Video 2 -->
+        <div class="flex flex-col gap-4">
+          <video class="w-full rounded-2xl shadow-sm aspect-[9/16] object-cover bg-hm-emerald/5" src="assets/work/middle-highlight.mp4" poster="assets/work/middle-highlight-poster.png" muted loop playsinline preload="none" controls></video>
+          <p class="font-body text-sm text-hm-ink/70 leading-relaxed px-1">
+            Event highlights &middot; Sound healing &middot; Immersive edit.
+          </p>
+        </div>
+        <!-- Video 3 -->
+        <div class="flex flex-col gap-4">
+          <video class="w-full rounded-2xl shadow-sm aspect-[9/16] object-cover bg-hm-emerald/5" src="assets/work/event-highlight.mp4" poster="assets/work/event-highlight-poster.jpeg" muted loop playsinline preload="none" controls></video>
+          <p class="font-body text-sm text-hm-ink/70 leading-relaxed px-1">
+            Event highlight &middot; 20 September &middot; Pacing matched to breath.
+          </p>
+        </div>
+      </div>
+      
+      <p class="font-body text-sm text-hm-ink/50 italic mb-24 text-center">All examples shown are studio pieces.</p>
+
+      <!-- Before / After -->
+      <div class="max-w-4xl mx-auto">
+        <h3 class="font-display text-2xl sm:text-3xl text-hm-ink mb-4" style="font-weight: 500;">Same footage. Two results.</h3>
+        <p class="font-body text-lg text-hm-ink/80 mb-10 max-w-2xl">
+          Left is what came off the phone. Right is what went out on Instagram. Nothing was re-shot.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Before -->
+          <div class="flex flex-col gap-3">
+            <video class="w-full rounded-2xl shadow-sm aspect-[9/16] object-cover bg-hm-emerald/5 opacity-80" src="assets/work/img-4960.mp4" poster="assets/work/img-4960-poster.jpg" muted loop playsinline preload="none" controls></video>
+            <p class="font-body text-sm font-semibold text-hm-ink/60 uppercase tracking-widest text-center">Before</p>
+          </div>
+          <!-- After -->
+          <div class="flex flex-col gap-3">
+            <video class="w-full rounded-2xl shadow-sm aspect-[9/16] object-cover bg-hm-emerald/5" src="assets/work/moon-event-aug-2026.mp4" poster="assets/work/moon-event-poster.jpg" muted loop playsinline preload="none" controls></video>
+            <p class="font-body text-sm font-semibold text-hm-gold uppercase tracking-widest text-center">After</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 4. WHAT YOU GET                                 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="what-you-get" class="bg-hm-jade relative overflow-hidden" style="padding: 100px 0;">
+
+    <!-- Subtle watermark -->
+    <div class="watermark bottom-8 right-0 hidden lg:block" style="color: rgba(253,253,208,0.04); font-size: 140px; transform: rotate(-5deg);">
+      Deliverables
+    </div>
+
+    <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-cream leading-tight mb-16" style="font-weight: 500; letter-spacing: -0.02em;">What You Get</h2>
+
+      <div class="grid gap-8 md:gap-10 max-w-3xl">
+
+        <!-- Event Reels -->
+        <div class="gold-border-left">
+          <h3 class="font-display text-xl sm:text-2xl text-hm-gold mb-3" style="font-weight: 500;">Event Reels</h3>
+          <p class="font-body text-base sm:text-lg text-hm-cream/85 leading-relaxed">
+            1–2 vertical reels (15–30 seconds) per event, cut from your own footage with the real event audio, not stock music. Delivered within <strong class="text-hm-cream">3–5 days</strong> of your event.
+          </p>
+        </div>
+
+        <!-- Event Stories -->
+        <div class="gold-border-left">
+          <h3 class="font-display text-xl sm:text-2xl text-hm-gold mb-3" style="font-weight: 500;">Event Stories</h3>
+          <p class="font-body text-base sm:text-lg text-hm-cream/85 leading-relaxed">
+            A 5–8 frame story sequence, delivered <strong class="text-hm-cream">the same day or the next morning</strong>, so people can see it while the event is still fresh.
+          </p>
+        </div>
+
+        <!-- Promotional Videos -->
+        <div class="gold-border-left">
+          <h3 class="font-display text-xl sm:text-2xl text-hm-gold mb-3" style="font-weight: 500;">Promotional Videos</h3>
+          <p class="font-body text-base sm:text-lg text-hm-cream/85 leading-relaxed">
+            One 30–60 second announcement video per upcoming event, delivered <strong class="text-hm-cream">1–2 weeks</strong> before it opens for bookings.
+          </p>
+        </div>
+
+        <!-- Creative Assets -->
+        <div class="gold-border-left">
+          <h3 class="font-display text-xl sm:text-2xl text-hm-gold mb-3" style="font-weight: 500;">Creative Assets</h3>
+          <p class="font-body text-base sm:text-lg text-hm-cream/85 leading-relaxed">
+            A flyer or poster (digital + print-ready), plus a small set of reusable Instagram templates in your brand colors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Package note -->
+      <div class="mt-12 max-w-3xl">
+        <p class="font-body text-base text-hm-cream/70 leading-relaxed border-t border-hm-cream/10 pt-8">
+          A full event package&nbsp;— reel, stories, and assets together&nbsp;— typically takes <strong class="text-hm-cream/90">5–7 days</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 5. PRICING                                      -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="pricing" class="bg-hm-ivory" style="padding: 100px 0;">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-ink leading-tight mb-16" style="font-weight: 500; letter-spacing: -0.02em;">Pricing</h2>
+
+      <div class="grid gap-8 md:gap-10 max-w-3xl">
+        <div class="border-t border-hm-ink/10 pt-6">
+          <h3 class="font-display text-2xl sm:text-3xl text-hm-ink mb-2" style="font-weight: 500;">Single event <span class="text-hm-gold">&mdash; $200 – $300</span></h3>
+          <p class="font-body text-lg text-hm-ink/80 leading-relaxed">
+            1–2 reels + a 5–8 frame story sequence from one event.
+          </p>
+        </div>
+        <div class="border-t border-hm-ink/10 pt-6">
+          <h3 class="font-display text-2xl sm:text-3xl text-hm-ink mb-2" style="font-weight: 500;">Event package <span class="text-hm-gold">&mdash; $400 – $500</span></h3>
+          <p class="font-body text-lg text-hm-ink/80 leading-relaxed">
+            Reels, stories, a flyer, and a set of Instagram templates in your colors.
+          </p>
+        </div>
+        <div class="border-t border-hm-ink/10 pt-6">
+          <h3 class="font-display text-2xl sm:text-3xl text-hm-ink mb-2" style="font-weight: 500;">Monthly <span class="text-hm-gold">&mdash; $750/month</span></h3>
+          <p class="font-body text-lg text-hm-ink/80 leading-relaxed">
+            Up to 3 events a month, plus one promotional video for whatever's next.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 max-w-3xl">
+        <p class="font-body text-base text-hm-ink/70 leading-relaxed bg-black/5 rounded-xl p-6">
+          Priced in USD. Paid by card or bank transfer, 50% up front on the first project, then on delivery once we've worked together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 6. RISK REVERSAL                                -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="bg-hm-emerald relative overflow-hidden" style="padding: 100px 0;">
+    <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8 text-center max-w-3xl">
+      <h2 class="font-display text-3xl sm:text-4xl text-hm-cream leading-tight mb-6" style="font-weight: 500; letter-spacing: -0.02em;">The first one is on me.</h2>
+      <p class="font-body text-lg sm:text-xl text-hm-cream/85 leading-relaxed mb-10">
+        Send me footage from your next event. I'll cut a sample event reel, story, or post and send it back within three days. If you like it, we talk about the full suite of assets. If you don't, keep the file anyway&nbsp;— no invoice, no follow-up sequence.
+      </p>
+      <a href="#say-hello" class="inline-flex items-center px-8 py-3.5 bg-hm-gold text-hm-emerald font-body text-base rounded-full hover:bg-hm-gold-light transition-all duration-200 hover:shadow-lg hover:shadow-hm-gold/20 mb-6" style="font-weight: 500;">
+        Send me footage
+      </a>
+      <p class="font-body text-sm text-hm-cream/50 leading-relaxed">
+        One free reel, story, or post per practitioner, and only for people running real events.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- WELLNESS / MEDITATION BACKGROUND WRAPPER          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="relative bg-hm-ivory bg-cover bg-center bg-no-repeat" style="background-image: url('assets/ivory-meditation-bg.jpg');">
+    <!-- Overlay to blend the image seamlessly with the site's ivory color and ensure readability -->
+    <div class="absolute inset-0 bg-hm-ivory/70 mix-blend-overlay"></div>
+    <div class="absolute inset-0 bg-hm-ivory/40"></div>
+
+    <div class="relative z-10">
+      <!-- 7. HOW WE WORK TOGETHER -->
+      <section id="how-we-work" style="padding: 100px 0;">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-ink leading-tight mb-12" style="font-weight: 500; letter-spacing: -0.02em;">How this works</h2>
+          <div class="max-w-2xl">
+            <p class="font-body text-lg sm:text-xl text-hm-ink/90 leading-relaxed">
+              You film it. Your phone is enough&nbsp;— propped on a block at the back of the room is enough. Send me the clips and the raw audio the same night.<br><br>
+              I cut it here while you sleep. Most things are back in your inbox inside three days; story frames are usually there the next morning.<br><br>
+              If something's off, say it plainly and I'll fix it. No brief template, no revision rounds that run for weeks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. WHO'S BEHIND THIS -->
+      <section id="about" style="padding: 0 0 100px;">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row gap-12 items-start max-w-4xl">
+            <img src="assets/yash.png" alt="Yash Praveen" class="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover shadow-sm bg-hm-emerald/10 flex-shrink-0" />
+            <div>
+              <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-ink leading-tight mb-6" style="font-weight: 500; letter-spacing: -0.02em;">Who's behind this</h2>
+              <p class="font-body text-lg sm:text-xl text-hm-ink/90 leading-relaxed mb-6">
+                I'm Yash Praveen. I run Hydyn Minds from Bokaro, Jharkhand, India&nbsp;— one person, not an agency floor, which is why I take a small number of practitioners at a time.<br><br>
+                I spent years doing performance marketing and content production, which mostly taught me that the best footage in the world doesn't matter if the first two seconds don't hold. That's the part I'm good at.
+              </p>
+              <a href="https://www.linkedin.com/in/hydynminds/" target="_blank" rel="noopener noreferrer" class="inline-flex font-body text-hm-gold hover:text-hm-ink transition-colors" style="font-weight: 500;">
+                LinkedIn &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. YOUR PARTICIPANTS' PRIVACY -->
+      <section id="privacy-policy-note" style="padding: 0 0 100px;">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+          <h2 class="font-display text-3xl sm:text-4xl text-hm-ink leading-tight mb-8" style="font-weight: 500; letter-spacing: -0.02em;">About the people in the room</h2>
+          <div class="max-w-2xl">
+            <p class="font-body text-lg text-hm-ink/90 leading-relaxed">
+              Faces in a breathwork circle are not content. Tell me who's opted out and I'll cut around them&nbsp;— or blur, or shoot wide enough that nobody's identifiable. Your footage stays with me and isn't reused anywhere without you saying yes in writing.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <style>
+
+    /* FAQ accordion */
+    .faq-item {
+      border-bottom: 1px solid rgba(253, 253, 208, 0.12);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.5rem 2.5rem 1.5rem 0;
+      position: relative;
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #FDFDD0;
+      transition: color 0.2s ease;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: #A8862A; }
+    .faq-item summary:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    /* Plus / minus indicator */
+    .faq-item summary::after {
+      content: '';
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      width: 14px;
+      height: 2px;
+      background: #D4AF37;
+      transform: translateY(-50%);
+    }
+    .faq-item summary::before {
+      content: '';
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      width: 14px;
+      height: 2px;
+      background: #D4AF37;
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .faq-item[open] summary::before {
+      transform: translateY(-50%) rotate(0deg);
+      opacity: 0;
+    }
+    .faq-answer {
+      padding: 0 2.5rem 1.75rem 0;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(253, 253, 208, 0.82);
+      max-width: 62ch;
+    }
+    .faq-answer p + p { margin-top: 0.9rem; }
+    .faq-answer strong { color: #FDFDD0; font-weight: 600; }
+    .faq-group-label {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #A8862A;
+      margin-bottom: 0.75rem;
+      margin-top: 3.5rem;
+    }
+    .faq-group-label:first-of-type { margin-top: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .faq-item summary::before { transition: none; }
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FAQ                                             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="faq" class="bg-hm-jade" style="padding: 100px 0;">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-cream leading-tight mb-4" style="font-weight: 500; letter-spacing: -0.02em;">
+        Questions people ask
+      </h2>
+      <p class="font-body text-lg text-hm-cream/80 mb-12 max-w-xl">
+        Mostly the ones about working with someone on the other side of the world. Fair questions — here are straight answers.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-12">
+
+        <!-- ────────── GROUP 1 ────────── -->
+        <div class="flex flex-col">
+          <details class="group">
+            <summary class="font-display text-2xl text-hm-gold mb-6 font-medium tracking-wide border-b border-hm-cream/20 pb-4 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+              The work itself
+              <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="flex flex-col">
+
+        <details class="faq-item">
+          <summary>Do you come and film my event?</summary>
+          <div class="faq-answer">
+            <p>No. You film it, I edit it. That's the whole model, and it's why the turnaround is days instead of weeks and the cost is a fraction of hiring a local videographer.</p>
+            <p>A phone is genuinely enough. Most of what I work with is shot on an iPhone propped against a block at the back of the room.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if my footage isn't very good?</summary>
+          <div class="faq-answer">
+            <p>Most of it isn't, at first. That's normal and it's fixable. Shaky handheld, uneven light, and phone audio that sounds thin are all things I deal with every week.</p>
+            <p>Three things make a real difference, and none of them cost anything: keep the phone still and let people move instead, shoot a few wide frames of the whole room plus a few closer details, and record a couple of minutes of clean audio with nobody talking so I have something to layer under the edit.</p>
+            <p>Send me what you have before your next event and I'll tell you specifically what to change. That's free.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much footage do you need?</summary>
+          <div class="faq-answer">
+            <p>For a reel, five to ten minutes of clips is plenty. For a full event package, fifteen to twenty minutes gives me enough variety to build stories as well.</p>
+            <p>More isn't better. Ten focused minutes beats an hour of the same wide shot.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I actually send you the files?</summary>
+          <div class="faq-answer">
+            <p>Google Drive, Dropbox, or WeTransfer — whichever you already use. Upload straight from your phone, share the link, done. No file size limits to worry about and nothing for you to install.</p>
+            <p>If you'd rather not think about it, I'll set up a shared folder with your name on it and you just drop clips in after each event.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How many rounds of changes do I get?</summary>
+          <div class="faq-answer">
+            <p>Two rounds included, and I've rarely needed the second. Tell me plainly what's off — "the opening is too slow," "cut the shot of the woman in blue" — and I'll fix it.</p>
+            <p>If after two rounds it still isn't working, that's my problem, not yours. I'll keep going or refund you.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you match my existing brand look?</summary>
+          <div class="faq-answer">
+            <p>Yes. Send me your colors, fonts, and a few posts you like the look of. If you don't have a defined brand, I'll work from your Instagram and we'll settle on something consistent as we go.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you use AI to make this?</summary>
+          <div class="faq-answer">
+            <p>Not for anything you'd see. Your footage is your footage — no generated faces, no synthetic rooms, no AI voiceover pretending to be you.</p>
+            <p>I do use software tools for the unglamorous parts: cleaning up audio, stabilizing a shaky clip, generating caption text I then correct by hand. That's editing, not invention.</p>
+          </div>
+        </details>
+
+          </div>
+          </details>
+        </div>
+
+        <!-- ────────── GROUP 2 ────────── -->
+        <div class="flex flex-col">
+          <details class="group">
+            <summary class="font-display text-2xl text-hm-gold mb-6 font-medium tracking-wide border-b border-hm-cream/20 pb-4 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+              Timing &amp; time zones
+              <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="flex flex-col">
+
+        <details class="faq-item">
+          <summary>You're in India. Does the time difference slow things down?</summary>
+          <div class="faq-answer">
+            <p>Usually the opposite. I'm roughly 9.5 to 13.5 hours ahead of you depending on where you are. Footage you upload after an evening event is often edited and waiting in your inbox when you wake up.</p>
+            <p>The only place the gap genuinely matters is live conversation, which is why calls get booked a day ahead rather than same-hour.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>When can we talk live?</summary>
+          <div class="faq-answer">
+            <p>Your mornings work best — that's my evening and I'm around. Book any slot that suits you and I'll be there. Occasionally your late evening works too.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How fast do you reply to email?</summary>
+          <div class="faq-answer">
+            <p>Same business day if you write during your morning. If you write late at night your time, you'll usually have a reply by the time you're up.</p>
+            <p>If something is genuinely urgent, text or WhatsApp me. I'll tell you the number once we're working together.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>My event is in four days. Can you still help?</summary>
+          <div class="faq-answer">
+            <p>For a promotional video, probably yes if you can get me the details today. For post-event reels, timing isn't a problem at all — the clock only starts when you send footage.</p>
+            <p>Ask. The worst answer is no.</p>
+          </div>
+        </details>
+
+          </div>
+          </details>
+        </div>
+
+        <!-- ────────── GROUP 3 ────────── -->
+        <div class="flex flex-col">
+          <details class="group">
+            <summary class="font-display text-2xl text-hm-gold mb-6 font-medium tracking-wide border-b border-hm-cream/20 pb-4 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+              Money &amp; paperwork
+              <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="flex flex-col">
+
+        <details class="faq-item">
+          <summary>What does this cost?</summary>
+          <div class="faq-answer">
+            <p>Single-event work typically lands between <strong>$200 and $300 USD</strong> depending on how many pieces you need. Ongoing monthly arrangements work out lower per event.</p>
+            <p>I quote after we talk, because a single video and a monthly retainer building reels, stories, posts, and flyers across three events are genuinely different jobs. Tell me what's coming up and you'll have a number the same day — no discovery call sequence, no proposal deck.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I pay someone overseas? Is that complicated?</summary>
+          <div class="faq-answer">
+            <p>Not for you. You'll get a normal invoice and pay by card or bank transfer the same way you'd pay any US vendor. The cross-border part is handled on my end.</p>
+            <p>Everything is quoted and invoiced in <strong>USD</strong>, so there's no exchange rate for you to think about.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I have to pay before I see anything?</summary>
+          <div class="faq-answer">
+            <p>No. The first reel, story, or post is free — send footage, get an edit back, decide from there.</p>
+            <p>After that, the first paid project is half up front and half on delivery. Once we've worked together a couple of times, it's just invoiced on delivery.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there a contract? Am I locked in?</summary>
+          <div class="faq-answer">
+            <p>A one-page agreement covering scope, timing, payment, and who owns what. No minimum term, no auto-renewal, no cancellation fee. Monthly arrangements can be stopped with two weeks' notice.</p>
+            <p>If you want out, you're out. Chasing people who'd rather leave is a bad way to run a studio.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Who owns the finished videos?</summary>
+          <div class="faq-answer">
+            <p>You do, fully, once the invoice is paid. Use them anywhere — Instagram, your site, paid ads, a retreat brochure. No usage caps or expiry.</p>
+            <p>Any music I add is properly licensed for commercial use, so nothing gets flagged or muted later. Most of the time the best audio is your own room anyway.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens to my raw footage?</summary>
+          <div class="faq-answer">
+            <p>It stays in a private folder, and it's yours. I keep it for 90 days in case you want another cut, then delete it unless you ask me not to.</p>
+            <p>Nothing gets used as a portfolio piece, in an ad, or anywhere public without you agreeing in writing first.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What about the people in my circle — do they need to consent?</summary>
+          <div class="faq-answer">
+            <p>That's your call to make in the room, and I'd rather you make it carefully. Tell me who's opted out and I'll cut around them, blur them, or keep the framing wide enough that nobody's identifiable.</p>
+            <p>Faces mid-release are not content. If something feels too exposed to post, I'll flag it rather than hand it to you and let you find out later.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I know you'll actually deliver?</summary>
+          <div class="faq-answer">
+            <p>You don't, yet — which is exactly why the first reel, story, or post is free and costs you nothing but a file upload. You'll have real work in your hands before any money moves.</p>
+            <p>That's not a marketing offer. It's the only sensible way for a new studio to earn the benefit of the doubt.</p>
+          </div>
+        </details>
+
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Closing nudge -->
+      <div class="max-w-3xl mt-14">
+        <p class="font-body text-lg text-hm-cream/80 leading-relaxed">
+          Something not answered here?
+          <a href="#say-hello" class="text-hm-gold hover:text-hm-cream transition-colors" style="font-weight: 500;">Just ask &rarr;</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 7. SAY HELLO (CONTACT FORM)                     -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="say-hello" class="bg-hm-ivory" style="padding: 100px 0;">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-hm-ink leading-tight mb-6" style="font-weight: 500; letter-spacing: -0.02em;">Start the Conversation</h2>
+      <p class="font-body text-lg text-hm-ink/80 leading-relaxed mb-12 max-w-xl">
+        If this sounds like a fit, tell us what's coming up and we'll get back to you.
+      </p>
+
+      <!-- Form Card -->
+      <div id="form-container" class="max-w-xl">
+        <div class="bg-white/60 rounded-[20px] p-8 sm:p-10 shadow-sm border border-hm-ink/5">
+          <form id="contact-form" class="space-y-6" novalidate>
+
+            <!-- Honeypot -->
+            <div class="hidden">
+              <label for="field-honey">Leave this field blank</label>
+              <input type="text" id="field-honey" name="honey" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <!-- Name -->
+            <div>
+              <label for="field-name" class="block font-body text-sm text-hm-ink mb-2" style="font-weight: 500;">Name</label>
+              <input
+                type="text"
+                id="field-name"
+                name="name"
+                required
+                placeholder="Your name"
+                class="form-input w-full px-4 py-3 rounded-xl border border-hm-ink/15 bg-white/80 font-body text-base text-hm-ink placeholder:text-hm-ink/30 transition-all duration-200"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="field-email" class="block font-body text-sm text-hm-ink mb-2" style="font-weight: 500;">Email</label>
+              <input
+                type="email"
+                id="field-email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                class="form-input w-full px-4 py-3 rounded-xl border border-hm-ink/15 bg-white/80 font-body text-base text-hm-ink placeholder:text-hm-ink/30 transition-all duration-200"
+              />
+            </div>
+
+            <!-- Practice Name -->
+            <div>
+              <label for="field-practice" class="block font-body text-sm text-hm-ink mb-2" style="font-weight: 500;">Practice or business name</label>
+              <input
+                type="text"
+                id="field-practice"
+                name="practice"
+                placeholder="e.g. Sacred Sound Healing"
+                class="form-input w-full px-4 py-3 rounded-xl border border-hm-ink/15 bg-white/80 font-body text-base text-hm-ink placeholder:text-hm-ink/30 transition-all duration-200"
+              />
+            </div>
+
+            <!-- What's coming up -->
+            <div>
+              <label for="field-message" class="block font-body text-sm text-hm-ink mb-2" style="font-weight: 500;">What's coming up?</label>
+              <textarea
+                id="field-message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your next event, retreat, or workshop..."
+                class="form-input w-full px-4 py-3 rounded-xl border border-hm-ink/15 bg-white/80 font-body text-base text-hm-ink placeholder:text-hm-ink/30 transition-all duration-200 resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div class="flex items-start gap-3 mt-4">
+              <input type="checkbox" id="field-consent" name="consent" class="mt-1 w-5 h-5 rounded border-hm-ink/20 text-hm-gold focus:ring-hm-gold" />
+              <label for="field-consent" class="font-body text-sm text-hm-ink/80 leading-relaxed">
+                I'm okay with Hydyn Minds emailing me back.
+              </label>
+            </div>
+
+            <!-- Submit & Book -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center gap-6">
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full sm:w-auto px-10 py-3.5 bg-hm-gold text-hm-emerald font-body text-base rounded-full hover:bg-hm-gold-light transition-all duration-200 hover:shadow-lg hover:shadow-hm-gold/20 active:scale-[0.98]"
+                style="font-weight: 500;"
+              >
+                Say hello
+              </button>
+              <span class="font-body text-hm-ink/50 text-sm">Or</span>
+              <a href="https://cal.com/hydynminds" target="_blank" rel="noopener noreferrer" class="font-body text-hm-gold hover:text-hm-ink transition-colors font-medium">
+                book 15 minutes &rarr;
+              </a>
+            </div>
+
+            <!-- Error message (hidden) -->
+            <p id="form-error" class="hidden font-body text-sm text-red-600 mt-2"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success state (hidden) -->
+      <div id="form-success" class="hidden max-w-xl">
+        <div class="bg-white/60 rounded-[20px] p-10 sm:p-12 shadow-sm border border-hm-ink/5 text-center">
+          <div class="w-16 h-16 bg-hm-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-hm-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="font-display text-2xl text-hm-ink mb-3" style="font-weight: 500;">Thank you</h3>
+          <p class="font-body text-lg text-hm-ink/70">We'll be in touch soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 8. FOOTER                                       -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer id="footer" class="bg-hm-emerald-deep" style="padding: 60px 0 40px;">
+    <div class="max-w-content mx-auto px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10 mb-12">
+
+        <!-- Logo + Tagline -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/logo.svg" alt="Hydyn Minds logo" width="48" height="48" />
+            <span class="font-display text-xl text-hm-cream" style="font-weight: 500;">Hydyn Minds</span>
+          </div>
+          <p class="font-body text-sm text-hm-cream/60 max-w-xs leading-relaxed">
+            Content for people who work with sound and breath.<br />US &amp; Canada.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-col sm:flex-row gap-8 sm:gap-16">
+          <div>
+            <h4 class="font-body text-xs text-hm-gold tracking-[0.15em] uppercase mb-3">Contact</h4>
+            <a href="mailto:hello@hydynminds.in" class="font-body text-sm text-hm-cream/70 hover:text-hm-gold transition-colors">hello@hydynminds.in</a>
+          </div>
+          <div>
+            <h4 class="font-body text-xs text-hm-gold tracking-[0.15em] uppercase mb-3">Legal</h4>
+            <div class="flex flex-col gap-2">
+              <a href="terms.html" class="font-body text-sm text-hm-cream/70 hover:text-hm-gold transition-colors">Terms &amp; Conditions</a>
+              <a href="privacy.html" class="font-body text-sm text-hm-cream/70 hover:text-hm-gold transition-colors">Privacy Policy</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-body text-xs text-hm-gold tracking-[0.15em] uppercase mb-3">Social</h4>
+            <div class="flex flex-col gap-2">
+              <a href="https://www.linkedin.com/in/hydynminds/" target="_blank" rel="noopener noreferrer" class="font-body text-sm text-hm-cream/70 hover:text-hm-gold transition-colors">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-hm-cream/10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="font-body text-xs text-hm-cream/60">
+          &copy; 2026 Hydyn Minds &middot; Hyper Dynamic Minds
+        </p>
+        <p class="font-body text-xs text-hm-cream/60">
+          Bokaro Steel City, Jharkhand, 827001, India
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <script>
+    // ── Mobile Menu Toggle ──
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let menuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      menuBtn.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+        bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      } else {
+        bar1.style.transform = '';
+        bar2.style.opacity = '';
+        bar3.style.transform = '';
+      }
+    });
+
+    // Close mobile menu on anchor click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        bar1.style.transform = '';
+        bar2.style.opacity = '';
+        bar3.style.transform = '';
+      });
+    });
+
+    // ── Nav shadow on scroll ──
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('shadow-lg');
+      } else {
+        nav.classList.remove('shadow-lg');
+      }
+    }, { passive: true });
+
+    // ── Contact Form Submission ──
+    const WEBHOOK_URL = 'https://n8n.praaveen.online/webhook-test/767d1f6a-e295-4fef-a121-b623fecd1b95';
+
+    const form = document.getElementById('contact-form');
+    const formContainer = document.getElementById('form-container');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formError.classList.add('hidden');
+
+      // Honeypot check
+      const honey = document.getElementById('field-honey').value;
+      if (honey) {
+        // Silently fail for bots
+        return;
+      }
+
+      // Basic validation
+      const name = document.getElementById('field-name').value.trim();
+      const email = document.getElementById('field-email').value.trim();
+      const consent = document.getElementById('field-consent').checked;
+
+      if (!name) {
+        showError('Please enter your name.');
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('Please enter a valid email address.');
+        return;
+      }
+
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.style.opacity = '0.7';
+
+      const data = {
+        name: name,
+        email: email,
+        practice: document.getElementById('field-practice').value.trim(),
+        message: document.getElementById('field-message').value.trim(),
+        consent: consent,
+        submitted_at: new Date().toISOString(),
+      };
+
+      try {
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) throw new Error('Submission failed');
+
+        // Show success
+        formContainer.style.opacity = '0';
+        formContainer.style.transition = 'opacity 0.4s ease';
+        setTimeout(() => {
+          formContainer.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+          formSuccess.classList.add('fade-enter');
+          requestAnimationFrame(() => {
+            formSuccess.classList.add('fade-enter-active');
+          });
+        }, 400);
+
+      } catch (err) {
+        showError('Something went wrong. Please try emailing us directly at hello@hydynminds.in');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Say hello';
+        submitBtn.style.opacity = '1';
+      }
+    });
+
+    function showError(msg) {
+      formError.textContent = msg;
+      formError.classList.remove('hidden');
+    }
+
+  </script>
+
+</body>
+</html>
